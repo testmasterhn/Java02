@@ -4,15 +4,26 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
 
 public class Product_Test {
     @Test
-    public void sort()
+    public void sortPrice()
     {
         //Given
+        rdString rs = new rdString();
         ArrayList<Product> ar = new ArrayList<Product>();
-        String arrayName[] = {"Product A", "Product B", "Product C", "Product D", "Product E"};
-        Integer arrayPrice[] = {25000, 150000, 40000, 30000, 50000};
+        String arrayName[] = new String[5];
+        Integer arrayPrice[] = new Integer[5];
+
+        for(int i = 0; i < arrayName.length; i++){
+            arrayName[i] = "Product" + rs.generateRdString(new Random(), rdString.text, 3);
+        }
+
+        for(int i = 0; i < arrayPrice.length; i++){
+            arrayPrice[i] = Integer.parseInt(rs.generateRdString(new Random(), rdString.number, 2))*1000;
+        }
+
         Arrays.sort(arrayPrice, Collections.reverseOrder());
         Collections.shuffle(Arrays.asList(arrayName));
         for(int i = 0; i < arrayName.length; i++ ){
@@ -30,4 +41,13 @@ public class Product_Test {
         String expected = arrayName[0] + " " + arrayPrice[0];
         Assert.assertEquals(expected, String.valueOf(ar.get(0)));
     }
+
+//    @Test
+//    public void test_method(){
+//        rdString rs = new rdString();
+//        String arrayName[] = new String[5];
+//        Integer arrayPrice[] = new Integer[5];
+//
+//
+//    }
 }
