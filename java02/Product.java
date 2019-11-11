@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-class Product
+public class Product
 {
     public String productName;
     public int productPrice;
@@ -23,6 +23,6 @@ class SortByPrice implements Comparator<Product>
 {
     public int compare(Product a, Product b)
     {
-        return a.productPrice - b.productPrice;
+        return b.productPrice - a.productPrice;
     }
 }
