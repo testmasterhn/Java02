@@ -8,25 +8,24 @@ import java.util.Random;
 
 public class Product_Test {
     @Test
-    public void sortPrice()
-    {
+    public void sortPrice() {
         //Given
         rdString rs = new rdString();
         ArrayList<Product> ar = new ArrayList<Product>();
         String arrayName[] = new String[5];
         Integer arrayPrice[] = new Integer[5];
 
-        for(int i = 0; i < arrayName.length; i++){
+        for (int i = 0; i < arrayName.length; i++) {
             arrayName[i] = "Product" + rs.generateRdString(new Random(), rdString.text, 3);
         }
 
-        for(int i = 0; i < arrayPrice.length; i++){
-            arrayPrice[i] = Integer.parseInt(rs.generateRdString(new Random(), rdString.number, 2))*1000;
+        for (int i = 0; i < arrayPrice.length; i++) {
+            arrayPrice[i] = Integer.parseInt(rs.generateRdString(new Random(), rdString.number, 2)) * 1000;
         }
 
         Arrays.sort(arrayPrice, Collections.reverseOrder());
         Collections.shuffle(Arrays.asList(arrayName));
-        for(int i = 0; i < arrayName.length; i++ ){
+        for (int i = 0; i < arrayName.length; i++) {
             ar.add(new Product(arrayName[i] + " ", arrayPrice[i]));
         }
 
@@ -36,18 +35,13 @@ public class Product_Test {
 
         //Then
         System.out.println("\nSorted by Price");
-        for (int i=0; i<ar.size(); i++)
+        for (int i = 0; i < ar.size(); i++){
             System.out.println(ar.get(i));
-        String expected = arrayName[0] + " " + arrayPrice[0];
-        Assert.assertEquals(expected, String.valueOf(ar.get(0)));
-    }
+            String expected = arrayName[i] + " " + arrayPrice[i];
+            Assert.assertEquals(expected, String.valueOf(ar.get(i)));
+        }
 
-//    @Test
-//    public void test_method(){
-//        rdString rs = new rdString();
-//        String arrayName[] = new String[5];
-//        Integer arrayPrice[] = new Integer[5];
-//
-//
-//    }
+
+        ;
+    }
 }
