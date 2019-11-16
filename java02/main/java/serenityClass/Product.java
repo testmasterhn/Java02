@@ -7,4 +7,5 @@ import java.util.Random;
 public class Product {
     String Name;
     int Price;
+
 }

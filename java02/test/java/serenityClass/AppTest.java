@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * Unit test for simple App.
@@ -38,5 +39,15 @@ public class AppTest
 
         //Then
         Assert.assertTrue("Wrong", result = true);
+    }
+
+    @Test
+    public void SortDescBuilder(){
+        Builder sortedProducts = new Builder.ProductBuilder()
+                .generateRdList()
+                .thenSortList()
+                .thenCheckList()
+                .build();
+
     }
 }

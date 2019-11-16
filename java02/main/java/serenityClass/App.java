@@ -10,7 +10,8 @@ import java.util.Random;
  */
 public class App 
 {
-    private String[] productName ={
+    Random rd = new Random();
+    private String[] productName = {
             "Product A",
             "Product B",
             "Product C",
@@ -20,7 +21,6 @@ public class App
     };
 
     public List<Product> getRandomProductList(){
-        Random rd = new Random();
         int lenght = rd.nextInt(10) + 1;
         System.out.println(lenght);
         List<Product> productList = new ArrayList<>();
@@ -52,5 +52,4 @@ public class App
         }
         return list;
     }
-
 }
