@@ -36,7 +36,7 @@ public class app {
         return x;
     }
 
-/*
+
     public static void main(String[] args){
         List<product> x= randomproduct();
         for(product i:x){
@@ -50,5 +50,5 @@ public class app {
 
     }
 
- */
+
 }
