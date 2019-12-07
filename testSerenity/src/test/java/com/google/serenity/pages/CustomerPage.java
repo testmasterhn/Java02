@@ -1,16 +1,10 @@
 package com.google.serenity.pages;
 
-import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import net.serenitybdd.core.pages.WebElementFacade;
-import java.util.stream.Collectors;
-
 import net.serenitybdd.core.annotations.findby.FindBy;
-
+import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-
-import java.util.List;
+import org.openqa.selenium.By;
 
 @DefaultUrl("http://staging-truck.ghn.vn/#/login")
 public class CustomerPage extends PageObject {
@@ -27,6 +21,10 @@ public class CustomerPage extends PageObject {
     @FindBy(className = "login-error-text")
     private WebElementFacade txtErrorLogin;
 
+    By locatorLoginError = By.className("login-error-text");
+    By locatorCreateOrderText = By.xpath("//div[@class = \"custom-title-h3\"]");
+
+
     public void enter_phone(String phone) {
         this.enter(phone).into(txtPhone);
     }
@@ -36,7 +34,7 @@ public class CustomerPage extends PageObject {
     }
 
     public String getErrorText(){
-        WebElementFacade txtErrorLogin = find(By.className("login-error-text"));
+        WebElementFacade txtErrorLogin = find(locatorLoginError);
         return txtErrorLogin.getText();
     }
 
@@ -45,7 +43,7 @@ public class CustomerPage extends PageObject {
     }
 
     public String getCreateOrderText() {
-        WebElementFacade createOrderText = find(By.xpath("//div[@class = \"custom-title-h3\"]"));
+        WebElementFacade createOrderText = find(locatorCreateOrderText);
         return createOrderText.getText();
     }
 }

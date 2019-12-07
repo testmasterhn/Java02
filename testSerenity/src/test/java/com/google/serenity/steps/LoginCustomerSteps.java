@@ -15,33 +15,33 @@ public class LoginCustomerSteps {
 
     @Given("^The Customer login page is showed$")
     public void the_customer_login_page_is_showed(){
-        anna.customer_page_is_open();
+        anna.open_customer_page();
     }
 
-    @When("^The user provides a valid credential to login$")
-    public void the_user_provides_a_valid_credential_to_login(){
-        anna.enters_phone("0964142565");
-        anna.enters_password("123123");
-        anna.click_login_button();
+    @When("^The user provides phone \"([^\"]*)\" and password \"([^\"]*)\" to login$")
+    public void the_user_provides_a_valid_credential_to_login(String phone, String password){
+        anna.enters_phone(phone)
+                .then_enters_password(password)
+                .then_click_login_button();
     }
 
-    @When("^The user provides an (.+) to login$")
-    public void the_user_provides_an_to_login(String invalidpassword){
-       anna.enters_phone("0964142565");
-       anna.enters_password(invalidpassword);
-       anna.click_login_button();
+    @When("^The user provides an (.+) and phone \"([^\"]*)\" to login$")
+    public void the_user_provides_an_to_login(String invalidpassword, String phone){
+       anna.enters_phone(phone)
+               .then_enters_password(invalidpassword)
+               .then_click_login_button();
     }
 
-    @When("^The user doesn't provide email or phone$")
-    public void the_user_doesnt_provide_email_or_phone(){
-        anna.enters_phone("0964142565");
-        anna.click_login_button();
+    @When("^The user doesn't provide email or phone and provide password \"([^\"]*)\"$")
+    public void the_user_doesnt_provide_email_or_phone(String password){
+        anna.enters_password(password)
+                .then_click_login_button();
     }
 
-    @When("^The user doesn't provide password$")
-    public void the_user_doesnt_provide_password(){
-        anna.enters_password("123123");
-        anna.click_login_button();
+    @When("^The user doesn't provide password and provide phone \"([^\"]*)\"$")
+    public void the_user_doesnt_provide_password(String phone){
+        anna.enters_phone(phone)
+                .then_click_login_button();
     }
 
     @Then("^Homepage will be shown$")
@@ -51,7 +51,7 @@ public class LoginCustomerSteps {
 
     @Then("^The message \"([^\"]*)\" will be showed$")
     public void the_message_something_will_be_showed(List<String> list1){
-        anna.error_text_is_showed(list1.get(0));
+        anna.see_error_text(list1.get(0));
     }
 
 

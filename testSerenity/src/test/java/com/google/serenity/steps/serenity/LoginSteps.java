@@ -2,39 +2,52 @@ package com.google.serenity.steps.serenity;
 
 import com.google.serenity.pages.CustomerPage;
 import net.thucydides.core.annotations.Step;
-import org.junit.Assert;
+
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.junit.MatcherAssert.*;
+
+
 
 public class LoginSteps {
-
     CustomerPage customerPage;
-
     @Step
-    public void error_text_is_showed(String errorText){
-        Assert.assertEquals(customerPage.getErrorText(), errorText);
+    public LoginSteps see_error_text(String errorText){
+        assertThat(customerPage.getErrorText(), equalTo(errorText));
+        return this;
     }
 
     @Step
-    public void customer_page_is_open(){
+    public void open_customer_page(){
         customerPage.open();
     }
 
     @Step
-    public void enters_phone(String phone) {
+    public LoginSteps enters_phone(String phone) {
         customerPage.enter_phone(phone);
+        return this;
     }
 
     @Step
-    public void enters_password(String password) {
+    public LoginSteps then_enters_password(String password) {
         customerPage.enter_password(password);
+        return this;
     }
 
     @Step
-    public void click_login_button(){
+    public LoginSteps enters_password(String password) {
+        customerPage.enter_password(password);
+        return this;
+    }
+
+    @Step
+    public LoginSteps then_click_login_button(){
         customerPage.click_submit_button();
+        return this;
     }
 
     @Step
-    public void should_see_customer_page_is_open(String createOrderText) {
-        Assert.assertEquals(customerPage.getCreateOrderText(), createOrderText);
+    public LoginSteps should_see_customer_page_is_open(String createOrderText) {
+        assertThat(customerPage.getCreateOrderText(), equalTo(createOrderText));
+        return this;
     }
 }
