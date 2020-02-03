@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"As an customer, I want to login to Truck Customer page","Show Customer homepage with valid credential","IGNORED","2019-12-18T15:01:07.040494+07:00[Asia/Ho_Chi_Minh]","0.0","0.62"
+"As an customer, I want to login to Truck Customer page","Show message with invalid password","IGNORED","2019-12-18T15:01:07.681579+07:00[Asia/Ho_Chi_Minh]","0.0","0.06"
+"As an customer, I want to login to Truck Customer page","Show message without email or phone","IGNORED","2019-12-18T15:01:07.75316+07:00[Asia/Ho_Chi_Minh]","0.0","0.05"
+"As an customer, I want to login to Truck Customer page","Show message without password","IGNORED","2019-12-18T15:01:07.813005+07:00[Asia/Ho_Chi_Minh]","0.0","0.05"

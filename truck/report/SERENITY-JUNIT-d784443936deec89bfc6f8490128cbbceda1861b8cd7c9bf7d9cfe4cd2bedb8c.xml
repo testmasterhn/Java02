@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Halftrip full flow" skipped="0" tests="2" time="45.3" timestamp="2020-01-20 11:50:53"><testcase name="Pick trip without order"><error message="stale element reference: element is not attached to the page document&#10;  (Session info: chrome=79.0.3945.117)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mh/fdm2ck3d2_7...}, goog:chromeOptions: {debuggerAddress: localhost:64579}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: ab9c9139294657ab09cea3961ae588b8&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.StaleElementReferenceException">stale element reference: element is not attached to the page document
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mh/fdm2ck3d2_7...}, goog:chromeOptions: {debuggerAddress: localhost:64579}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ab9c9139294657ab09cea3961ae588b8
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown</error><system-err>stale element reference: element is not attached to the page document
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/mh/fdm2ck3d2_7...}, goog:chromeOptions: {debuggerAddress: localhost:64579}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ab9c9139294657ab09cea3961ae588b8
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown
+vn.ghn.pages.OpsPage.click_to_trip_detail_button(OpsPage.java:207)
+vn.ghn.steps.serenity.OpsSteps.then_open_trip_detail_page(OpsSteps.java:133)
+vn.ghn.steps.HalftripSteps.i_open_trip_detail(HalftripSteps.java:45)
+✽.I open trip detail(src/test/resources/features/ops/halfTrip.feature:8)
+</system-err></testcase><testcase name="Change truck driver when create trip"><error message="Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$467/0x0000000800e72440@788a0513 (tried for 5 second(s) with 50 milliseconds interval)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'&#10;Driver info: driver.version: unknown&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$467/0x0000000800e72440@788a0513 (tried for 5 second(s) with 50 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$467/0x0000000800e72440@788a0513 (tried for 5 second(s) with 50 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LOG-TECH-MB0033.local', ip: 'fe80:0:0:0:1cca:86c0:5b36:75a2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '13.0.1'
+Driver info: driver.version: unknown
+vn.ghn.pages.OpsPage.click_to_box_truck_driver(OpsPage.java:145)
+vn.ghn.steps.serenity.OpsSteps.choose_truck_and_driver_again(OpsSteps.java:109)
+vn.ghn.steps.HalftripSteps.i_create_trip_with_changed_truck_driver_without_assigning_order(HalftripSteps.java:38)
+✽.I create trip with changed truck driver without assigning order(src/test/resources/features/ops/halfTrip.feature:14)
+</system-err></testcase></testsuite>
